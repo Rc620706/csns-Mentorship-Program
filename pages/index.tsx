@@ -53,10 +53,15 @@ export default function Home() {
               >I am a current computer science student at Dalhousie University, my passion and interest are Software Development, Artificial Intelligence, and Web-app Dev
               To know more about me, hit on the button below to get access to my Linkedlin, IG, and Github</p>
             </div>
+
+            {/* External links to my social accounts */}
             <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
-              <AiFillLinkedin />
-              <AiFillGithub />
-              <AiFillInstagram />
+              <a href="https://www.linkedin.com/in/richuan-li-karl723/" target="_blank">
+              <AiFillLinkedin /></a>
+              <a href="https://github.com/Rc620706?tab=repositories" target="_blank">
+              <AiFillGithub /></a>
+              <a href="https://www.instagram.com" target="_blank">
+              <AiFillInstagram /></a>
             </div>
             <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
               <Image src={My} layout="fill" objectFit="cover"/>
