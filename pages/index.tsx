@@ -193,7 +193,7 @@ export default function Home() {
                     </a>
                 </div>
                 <div className="pt-4">
-                  <Image src="/frame.png" width={170} height={210} alt="QR Code"/>
+                  <Image src="/frame-2.png" width={170} height={210} alt="QR Code"/>
                 </div>
 
                 {/* <div className="h-8 mr-3 mb-1.5">
