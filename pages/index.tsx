@@ -27,8 +27,10 @@ export default function Home() {
              {/* Narbar with dropdown list on small screen devices */}
             <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
               <div className="container flex flex-wrap items-center justify-between mx-auto">
-              <a href="https://cs-ns.com/" className="flex items-center" target="_blank">
-                  <img src="/NSCS.jpeg" className="h-6 mr-3 sm:h-9" alt="NSCS Logo" />
+              <a href="https://cs-ns.com/" className="flex items-center" target="_blank" rel="noreferrer">
+                <div className="h-8 mr-3 mb-1.5">
+                  <Image src="/NSCS.jpeg" alt="NSCS Logo" width={37} height={40} loading="lazy"/>
+                </div>
                   <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Mentorship Program</span>
               </a>
               {/* Dropdown button */}
@@ -43,7 +45,7 @@ export default function Home() {
               </div>
 
 
-              <a href="https://docs.google.com/forms/d/16cU6bmw3JYpWvaZH2Ho3vEklzNfdVzDwinKIHUU8fx8/edit?pli=1" target="_blank">
+              <a href="https://docs.google.com/forms/d/16cU6bmw3JYpWvaZH2Ho3vEklzNfdVzDwinKIHUU8fx8/edit?pli=1" target="_blank" rel="noreferrer">
                   <button type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-3 text-center mr-1 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Apply</button>
                   </a>
                   <button data-collapse-toggle="navbar-cta" type="button" className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-cta" aria-expanded="false" onClick={toggleMenu}>
@@ -52,6 +54,7 @@ export default function Home() {
                 </button>
                 
               </div>
+
 
               <div className={`items-center justify-between w-full md:flex md:w-auto md:order-1 ${showMenu ? '' : 'hidden'}`} id="navbar-cta">
                 <ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
@@ -62,7 +65,7 @@ export default function Home() {
                     <a href="#" className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
                   </li>
                   <li>
-                    <a href="https://cs-ns.com/join-us%2F%E5%8A%A0%E5%85%A5%E5%8D%8E%E5%8D%8F" className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700" target="_blank">Membership</a>
+                    <a href="https://cs-ns.com/join-us%2F%E5%8A%A0%E5%85%A5%E5%8D%8E%E5%8D%8F" className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700" target="_blank" rel="noreferrer">Membership</a>
                   </li>
                   <li>
                     <a href="#" className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Panel Team</a>
@@ -75,21 +78,16 @@ export default function Home() {
               </div>
             </nav>
 
-            {/* <div className="relative mx-auto bg-gradient-to-b from-teal-500 overflow-hidden md:h-40 md:w-auto">
-              <Image src={Mentoring} layout="fill" objectFit="cover"/>
-            </div> */}
-
-
             <div className="text-center p-10">
               <h1 className="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl"><span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Mentorship Program</span><br></br> <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-sky-400 text-3xl">Chinese Society of Novs Scotia </span></h1>
               <p className="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">We are aming to help more Chinese immigrants and students to engage in Halifax Community and foster their career development. <br></br>We are accepting mentees to join program for growing an exciting and inspiring mentorship community!</p>
             </div>
           </section>
 
-          <Image  src={Mentoring}  objectFit="contain"/>
+          <Image  src={Mentoring}  objectFit="contain" alt="main_page"/>
 
           <section className="p-10 mt-20">
-            <div className="text-center px-2 py-2.5 mr-3">
+            <div className="text-center px-2 py-2.5 mr-3 pb-5 mb-5">
               <h3 className="text-3xl text-teal-600 font-medium md:text-3xl">What you can expect?</h3>
             </div>
 
@@ -97,7 +95,7 @@ export default function Home() {
             <div className="lg:flex gap-10">
               <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white">
                 {/* <Image src={design} width={100} height={100}/> */}
-                <h3 className="text-lg font-medium pt-8 pb-2">Guide career path</h3>
+                <h3 className="text-lg font-medium pt-8 pb-2">Speed-Mentoring</h3>
                 <p className="py-2">
                   The greate opportunity to meet with industry professionals to get insights about employment, career development, and connect with community.
                 </p>
@@ -122,13 +120,70 @@ export default function Home() {
             </div>
             {/* card section end*/}
 
+
+            {/*Timeline start*/}
+          <div className="flex flex-row pb-10 pt-10">
+
+            <div className="flex-shrink-0 pt-6">
+              <Image src="/eventAgenda.jpeg" width={400} height={700} alt="QR Code"/>
+            </div>
+
+            <div className="flex-grow pl-10">
+            <ol className="relative border-l border-gray-200 dark:border-gray-700">                  
+                      <li className="mb-10 ml-4">
+                          <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                          <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Event Starts at 1:00 PM</time>
+                          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">1:00 PM - 1:08 PM Welcome + Event Schedule</h3>
+                          <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">Moderator Ding welcomes everyone participating in event and introduce the schedule.</p>
+                      </li>
+                      <li className="mb-10 ml-4">
+                          <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                          <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">1:08 PM - 1:15 PM</time>
+                          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">CSNS Introduction</h3>
+                          <p className="text-base font-normal text-gray-500 dark:text-gray-400">The introduction of Chinese Society of Nova Scotia.</p>
+                      </li>
+                      <li className="mb-10 ml-4">
+                          <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                          <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">1:15 PM - 1:55 PM</time>
+                          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Mentor Introduction - 5 Min max each</h3>
+                          <p className="text-base font-normal text-gray-500 dark:text-gray-400">Panel team introduce themselves.</p>
+                      </li>
+                      <li className="mb-10 ml-4">
+                          <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                          <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">1:55 PM - 2:05 PM</time>
+                          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Kahoot Warm Up Game + Door Prize</h3>
+                          <p className="text-base font-normal text-gray-500 dark:text-gray-400">Play the warm up game on Kahoot, answering questions and getting points to win the Door Prize.</p>
+                      </li>
+                      <li className="mb-10 ml-4">
+                          <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                          <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">2:05 PM - 2:15 PM</time>
+                          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Break and Speed Dating Introduction</h3>
+                          <p className="text-base font-normal text-gray-500 dark:text-gray-400">Take a little break and get to know the rules of Speed Dating.</p>
+                      </li>
+                      <li className="ml-4">
+                          <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                          <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">2:15 PM - 3:05 PM</time>
+                          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Speed Dating - 10 min each group</h3>
+                          <p className="text-base font-normal text-gray-500 dark:text-gray-400">50min for speed dating, participants will be assigned to different group according to the number they choose in the begining of the event.</p>
+                      </li>
+                  </ol>
+                  </div>
+                </div>
+
+                {/*Timeline End*/}
+
+                {/* Q&A part*/}
+                
+                {/* Q&A part END*/}
+
+
             {/* Membership and non-membership selection part*/}
             <div className="w-full p-4 text-center bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
                 <h5 className="mb-2 text-3xl font-bold text-gray-900 dark:text-white">We are here to help</h5>
-                <p className="mb-5 text-base text-gray-500 sm:text-lg dark:text-gray-400">Move you out of your comfortable zone, making a better <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-green-400">"You"</span>.</p>
+                <p className="mb-5 text-base text-gray-500 sm:text-lg dark:text-gray-400">Move you out of your comfortable zone, making a better <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-green-400">&ldquo;You</span>.</p>
                 
                 <div className="items-center justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">   
-                    <a href="https://cs-ns.com/join-us%2F加入华协" target="_blank" className="w-full sm:w-auto bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
+                    <a href="https://cs-ns.com/join-us%2F加入华协" target="_blank" rel="noreferrer" className="w-full sm:w-auto bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
                         {/* <svg className="mr-3 w-7 h-7" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google-play" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"></path></svg> */}
                         <svg className="mr-3 w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5zm6-10.125a1.875 1.875 0 11-3.75 0 1.875 1.875 0 013.75 0zm1.294 6.336a6.721 6.721 0 01-3.17.789 6.721 6.721 0 01-3.168-.789 3.376 3.376 0 016.338 0z"></path></svg>
                         <div className="text-left">
@@ -138,8 +193,12 @@ export default function Home() {
                     </a>
                 </div>
                 <div className="pt-4">
-                  <img className="mx-auto h-60 w-auto" src="/frame.png" alt="QR Code"></img> 
+                  <Image src="/frame.png" width={170} height={210} alt="QR Code"/>
                 </div>
+
+                {/* <div className="h-8 mr-3 mb-1.5">
+                  <Image src="/NSCS.jpeg" alt="NSCS Logo" width={37} height={40} loading="lazy"/>
+                </div> */}
             </div>
 
           </section>
@@ -148,11 +207,15 @@ export default function Home() {
           <footer className="p-4 bg-white sm:p-6 dark:bg-gray-900">
               <div className="md:flex md:justify-between">
                 <div className="mb-6 md:mb-0 flex items-center">
-                  <a href="https://cs-ns.com/" target="_blank" className="flex items-center">
-                    <img src="/NSCS.jpeg" className="h-8 mr-3" alt="NSCS Logo" />
+                  <a href="https://cs-ns.com/" target="_blank" rel="noreferrer" className="flex items-center">
+                  <div className="h-8 mr-3 mb-1.5">
+                    <Image src="/NSCS.jpeg" alt="NSCS Logo" width={37} height={40} loading="lazy"/>
+                  </div>
                     <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">NSCS</span>
                   </a>
-                  <img className="max-w-md my-30 mx-auto ml-2 h-20 w-20" src="/WechatAccount.jpg" alt="NSCS Logo"></img> 
+                  <div className="max-w-md my-30 mx-auto ml-2">
+                    <Image height={85} width={85} src="/WechatAccount.jpg" alt="NSCS Logo"/>
+                  </div>
                   
                   <div className="items-center justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
                     <svg className="w-6 h-auto ml-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"></path></svg>
@@ -169,10 +232,10 @@ export default function Home() {
                           <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
                           <ul className="text-gray-600 dark:text-gray-400">
                               <li className="mb-4">
-                                  <a href="https://cs-ns.com/" target="_blank" className="hover:underline ">NSCS official web</a>
+                                  <a href="https://cs-ns.com/" target="_blank" rel="noreferrer" className="hover:underline">NSCS official web</a>
                               </li>
                               <li>
-                                  <a href="https://www.linkedin.com/company/chinesesocietyofnovascotia/" target="_blank" className="hover:underline">Linkedin</a>
+                                  <a href="https://www.linkedin.com/company/chinesesocietyofnovascotia/" target="_blank" rel="noreferrer" className="hover:underline">Linkedin</a>
                               </li>
                           </ul>
                       </div>
@@ -181,10 +244,10 @@ export default function Home() {
                           <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">About NSCS</h2>
                           <ul className="text-gray-600 dark:text-gray-400">
                               <li className="mb-4">
-                                  <a href="https://cs-ns.com/join-us%2F%E5%8A%A0%E5%85%A5%E5%8D%8E%E5%8D%8F" target="_blank" className="hover:underline">Join NSCS</a>
+                                  <a href="https://cs-ns.com/join-us%2F%E5%8A%A0%E5%85%A5%E5%8D%8E%E5%8D%8F" target="_blank" rel="noreferrer" className="hover:underline">Join NSCS</a>
                               </li>
                               <li>
-                                  <a href="https://cs-ns.com/%E6%88%90%E5%91%98%E4%B8%80%E8%A7%88" target="_blank" className="hover:underline">Program Team</a>
+                                  <a href="https://cs-ns.com/%E6%88%90%E5%91%98%E4%B8%80%E8%A7%88" target="_blank" rel="noreferrer" className="hover:underline">Program Team</a>
                               </li>
                           </ul>
                       </div>
@@ -192,16 +255,16 @@ export default function Home() {
               </div>
               <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
               <div className="sm:flex sm:items-center sm:justify-between">
-                  <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://cs-ns.com/" target="_blank" className="hover:underline">NSCS Mentorship Program™</a>. All Rights Reserved.
+                  <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://cs-ns.com/" target="_blank" rel="noreferrer" className="hover:underline"> NSCS Mentorship Program™</a>. All Rights Reserved.
                   </span>
                   <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
-                      <a href="https://www.facebook.com/ChineseNS/" target="_blank" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                      <a href="https://www.facebook.com/ChineseNS/" target="_blank" rel="noreferrer" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                           <span className="sr-only">Facebook page</span>
                           <AiFillFacebook className="w-7 h-7"/></a>
-                      <a href="https://www.instagram.com/novascotiachinese/" target="_blank" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                      <a href="https://www.instagram.com/novascotiachinese/" target="_blank" rel="noreferrer" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                           <span className="sr-only">Instagram page</span>
                           <AiFillInstagram className="w-7 h-7"/></a>
-                      <a href="https://www.linkedin.com/company/chinesesocietyofnovascotia/" target="_blank" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                      <a href="https://www.linkedin.com/company/chinesesocietyofnovascotia/" target="_blank" rel="noreferrer" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                           <span className="sr-only">Twitter page</span>
                           <AiFillLinkedin className="w-7 h-7"/></a>
                   </div>
